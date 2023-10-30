@@ -4,17 +4,34 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
 
+/**
+ * DeteksiUmur adalah sebuah kelas yang digunakan untuk menghitung usia berdasarkan
+ * tahun, bulan, tanggal kelahiran yang dimasukkan oleh pengguna
+ */
 public class DeteksiUmur {
     private int tahunlahir;
 
+    /**
+     * Metode ini digunakan untuk mengatur tanggal lahir seseorang
+     * @param tahunLahir tahun kelahiran pengguna
+     */
     public void setTahunLahir(int tahunLahir) {
         this.tahunlahir = tahunLahir;
     }
 
+    /**
+     * metode ini digunakan untuk mendapatkan tanggal lahir seseorang
+     * @return tahun kelahiran pengguna
+     */
     public int getTahunLahir() {
         return tahunlahir;
     }
 
+    /**
+     * metode utama dari program yang memungkinkan user untuk memasukkan tahun, bulan, tanggal kelahiran
+     * program ini akan menghitung dan mencetak usia dengan format tahun, bulan dan tanggal
+     * @param args Argumen baris perintah yang digunakan saat menjalankan program (tidak digunakan dalam kasus ini)
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         DeteksiUmur tahunKelahiran = new DeteksiUmur();
@@ -37,7 +54,9 @@ public class DeteksiUmur {
         int months = age.getMonths();
         int days = age.getDays();
 
-        System.out.println("Your age is " + years + " years, " + months + " months, and " + days + " days.");
+        System.out.println("tahun lahir  " + years + " years, " + months + " months, and " + days + " days.");
     }
 }
+
+
 
